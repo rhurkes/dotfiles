@@ -44,3 +44,7 @@ if [ GIT_PROMPT = 0 ]; then
 else
     PS1='\n$(smiley) \u@\h $(__git_ps1 "(%s)") \e[30;1m\w\e[0m\n\$ '
 fi
+
+# Golang GOPATH
+export GOPATH=$HOME/go
+
