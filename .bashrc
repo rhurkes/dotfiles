@@ -31,8 +31,8 @@ fi
 # git prompt
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/scripts/git-prompt.sh
 GIT_PROMPT=0
-if [ -f ~/scripts/git-prompt.sh ]; then
-    source ~/scripts/git-prompt.sh
+if [ -f ~/.scripts/git-prompt.sh ]; then
+    source ~/.scripts/git-prompt.sh
     GIT_PROMPT=1
     GIT_PS1_SHOWDIRTYSTATE=1
     GIT_PS1_SHOWUNTRACKEDFILES=1
