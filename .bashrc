@@ -45,6 +45,18 @@ else
     PS1='\n$(smiley) \u@\h $(__git_ps1 "(%s)") \e[30;1m\w\e[0m\n\$ '
 fi
 
-# Golang GOPATH
+# History
+export HISTCONTROL=ignoredups:erasedups	# no duplicate entries
+export HISTSIZE=100000	# big history
+export HISTFILESIZE=100000	# big history
+shopt -s histappend # append on shell exit
+# Append after each command
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+ #Golang
 export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
+
+# Rust
+export PATH=$PATH:$HOME/.cargo/bin
 
