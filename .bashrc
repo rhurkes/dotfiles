@@ -5,6 +5,9 @@
 # Load variables
 [ -f ~/.bash_vars ] && . ~/.bash_vars
 
+# Load secrets - do not commit these
+[ -f ~/.secrets ] && . ~/.secrets
+
 # Load aliases
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
