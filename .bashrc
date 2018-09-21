@@ -45,7 +45,8 @@ shopt -s histappend # append on shell exit
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Dropbox
-[ -f ~/.dropbox-dist/dropboxd ] && ! (pidof dropbox 1>/dev/null) && (~/.dropbox-dist/dropboxd &)&
+DROPBOX_CMD="~/.dropbox-dist/dropboxd"
+[ -f ~/.dropbox-dist/dropboxd ] && ! (pidof dropbox 1>/dev/null) && eval "${DROPBOX_CMD}" &>/dev/null &!
 
 # Golang
 export GOPATH=$HOME/go
